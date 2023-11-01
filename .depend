@@ -1,0 +1,7 @@
+main.o: main.cpp canny.h
+correlate.o: correlate.cpp canny.h
+double_threshold.o: double_threshold.cpp canny.h
+hysteresis.o: hysteresis.cpp canny.h
+non_maximum_suppression.o: non_maximum_suppression.cpp canny.h
+get_grad_mag_and_angle.o: get_grad_mag_and_angle.cpp canny.h
+gen_gaussian_filter.o: gen_gaussian_filter.cpp canny.h

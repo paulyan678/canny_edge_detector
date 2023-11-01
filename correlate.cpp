@@ -35,6 +35,8 @@ Matrix correlate(const Matrix& img, const Matrix& kernel, const std::string& mod
     }
 
     Matrix output(output_rows, std::vector<double>(output_cols, 0.0));
+
+    #pragma omp parallel for collapse(2)
     for (int out_row = 0; out_row < output_rows; out_row++) {
         for (int out_col = 0; out_col < output_cols; out_col++) {
             for (int k_row = 0; k_row < kernel_rows; k_row++) {
